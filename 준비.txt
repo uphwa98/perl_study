@@ -1,0 +1,2 @@
+Plugins Admin을 통해 Plugin Manager 설치
+Plugin Manager를 통해서 NppExec 설치
