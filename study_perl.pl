@@ -39,7 +39,6 @@ print "banana : $myhash{'banana'}   apple : $howmany\n";
 print <<hereIam;  #hereIam 이 나올 때까지 그대로 출력함.
 jfoiwjfoijwof
 jfoiwjfoiwjf
-jwiojfoiwjfeow
 hereIam
 
 
@@ -47,7 +46,7 @@ print "Say yes or no : ";
   my $answer = "yes";#<STDIN>; 
   chomp $answer; # $answer 뒤에 따라붙는 \n을 잘라냅니다. 
   if( $answer eq 'yes' ) {
-    print <<'EOY';
+    print <<'EOY'; # ' 의 유무에 따라 차이가 있음.
 You said $answer.
 I will keep going on.
 EOY
@@ -62,16 +61,16 @@ print '$price = ', "$price\n";
 my $a = "abc";
 my $len = (length $a)-1; #문자열의 길이
 
-print "$a\r";
+print "$a\r"; # \r 은 커서를 현재 라인의 처음으로 옮김.
 for (0..$len) {
-    print "$_\n";
+    print "$_\n"; # $_ 은 loop 의 index를 나타냄.
 }
 print "loop end\n";
 
 
 # 특정 문자열을 포함하고 있는지 여부 확인 (=~ 연산자)
 my $long = "Tell me what\'s up.";
-if($long =~ /hat/)
+if ($long =~ /hat/)
 {
 	print "Yes, it contains \"hat\".\n";
 }
